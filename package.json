@@ -1,0 +1,43 @@
+{
+  "name": "tasker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^4.25.6",
+    "@headlessui/react": "^1.7.16",
+    "@heroicons/react": "^2.0.18",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@types/node": "20.4.9",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "appwrite": "^11.0.0",
+    "autoprefixer": "10.4.14",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.13",
+    "lodash.debounce": "^4.0.8",    
+    "next": "13.4.13",
+    "postcss": "8.4.27",
+    "react": "18.2.0",    
+    "react-beautiful-dnd": "^13.1.1",
+    "react-dom": "18.2.0",    
+    "sonner": "^1.0.3",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "3.3.3",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "5.1.6",
+    "typewriter-effect": "^2.21.0",
+    "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/lodash.debounce": "^4.0.7",
+    "@types/react-beautiful-dnd": "^13.1.4"
+  }
+}
