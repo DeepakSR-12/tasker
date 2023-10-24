@@ -27,4 +27,4 @@ Vercel for deployment
 
 ## Deployed on Vercel
 
-The Final deployed version can be found in [https://tasker-wheat-mu.vercel.app/](https://tasker-wheat-mu.vercel.app/)
+The Final deployed version can be found in [https://tasker-activity-monitor.vercel.app/](https://tasker-activity-monitor.vercel.app/)
