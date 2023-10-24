@@ -101,7 +101,7 @@ export default function Modal() {
                 </div>
                 <TaskTypeRadioGroup />
 
-                <div>
+                <div className="flex justify-end">
                   <div className="mt-2">
                     <button
                       type="submit"

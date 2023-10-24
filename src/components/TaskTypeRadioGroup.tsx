@@ -28,7 +28,7 @@ export default function TaskTypeRadioGroup() {
   const { newTaskType, setNewTaskType } = useBoardStore();
 
   return (
-    <div className="w-full px-4 py-5">
+    <div className="w-full py-5">
       <div className="mx-auto w-full max-w-md">
         <RadioGroup value={newTaskType} onChange={(e) => setNewTaskType(e)}>
           <RadioGroup.Label className="sr-only">Server size</RadioGroup.Label>

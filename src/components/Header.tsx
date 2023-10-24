@@ -50,9 +50,9 @@ function Header() {
   const tasks = !!extractTasks(board)?.length;
 
   return (
-    <header>
-      <div className="flex items-center p-4">
-        <Link href="/" className="flex items-center">
+    <header className="max-w-screen-xl w-full mx-auto">
+      <div className="flex items-center p-6">
+        <Link href="/" className="flex mr-4 items-center">
           <div
             onClick={() => router.push("/board")}
             className="relative h-8 w-8 mr-4"
@@ -62,7 +62,7 @@ function Header() {
           <h1 className={cn("text-2xl font-bold", font.className)}>Tasker</h1>
         </Link>
 
-        <div className="flex items-center space-x-5 flex-1 justify-end w-full">
+        <div className="flex items-center ml-4 space-x-5 flex-1 justify-end w-full">
           {/* Search */}
 
           {tasks ? (
@@ -71,10 +71,10 @@ function Header() {
 
               <Input
                 type="text"
-                placeholder="Search"
+                placeholder="Search..."
                 value={searchString}
                 onChange={(e) => setSearchString(e.target.value)}
-                className="flex-1 border-none"
+                className="flex-1 border-none ml-0"
               />
 
               <button type="submit" onClick={(e) => e.preventDefault()} hidden>
@@ -85,7 +85,7 @@ function Header() {
           <UserButton afterSignOutUrl="/" />
         </div>
       </div>
-      <div className="mb-8 space-y-4">
+      <div className="p-6 space-y-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center">
           Explore the power of the Tasker
         </h2>
@@ -95,28 +95,30 @@ function Header() {
       </div>
 
       {tasks ? (
-        <div className="flex justify-center px-5 py-2 md:py-5 space-x-4">
-          <p className="bg-white rounded-md shadow-md p-2 text-[#0055D1]">
+        <div className="flex flex-col p-5 space-y-2 items-center">
+          <p className="flex space-x-2 bg-white rounded-md shadow-md p-2 text-[#0055D1]">
             <UserCircleIcon
-              className={`inline-block h-10 w-10 text-[#0055D1] mr-1 ${
+              className={`inline-block h-16 w-16 md:h-10 md:w-10 text-[#0055D1] ${
                 loading ? "animate-spin" : ""
               }`}
             />
-            {suggestion.length !== 0
-              ? `You have ${
-                  suggestion[0] === 1
-                    ? "1 task to do"
-                    : `${suggestion[0]} tasks to do`
-                }, ${
-                  suggestion[1] === 1
-                    ? "1 task in progress"
-                    : `${suggestion[1]} tasks in progress `
-                } and ${
-                  suggestion[2] === 1
-                    ? "1 task done"
-                    : `${suggestion[2]} tasks done`
-                }`
-              : "We are summarizing your tasks for the day"}
+            <div className="flex items-center text-center ">
+              {suggestion.length !== 0
+                ? `You have ${
+                    suggestion[0] === 1
+                      ? "1 task to do"
+                      : `${suggestion[0]} tasks to do`
+                  }, ${
+                    suggestion[1] === 1
+                      ? "1 task in progress"
+                      : `${suggestion[1]} tasks in progress `
+                  } and ${
+                    suggestion[2] === 1
+                      ? "1 task done"
+                      : `${suggestion[2]} tasks done`
+                  }`
+                : "We are summarizing your tasks for the day"}
+            </div>
           </p>
           <div className="flex items-end justify-end p-2">
             <Button
