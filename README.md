@@ -27,4 +27,4 @@ Vercel for deployment
 
 ## Deployed on Vercel
 
-The Final deployed version can be found in [https://tasker-activity-monitor.vercel.app/](https://tasker-activity-monitor.vercel.app/)
+The Final deployed version can be found in [https://tasker-5u54ly1n6-deepaksr-12.vercel.app/](https://tasker-5u54ly1n6-deepaksr-12.vercel.app/)
